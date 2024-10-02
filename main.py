@@ -14,10 +14,10 @@ def analyze_sentiment(text):
 
 # function to get twitter posts
 def getTwitterPosts(query):
-    consumer_key = "b4jEgL3uMJGk9rEQQVBd9nf1g"
-    consumer_secret = "F7JiGuUxuwqwaN1hQRLjwb7goqL0afVGY3S0AhhSqUQjDzSuih"
-    access_token = "950421591091015681-XuPlQ3xqEiuV2Je5nJ6GMgc4cNpl6Jd"
-    access_token_secret = "VIJ3Jy85WrPSNMCi9hwKfcjcPQF7WH39bJ1GS4BWAJCn0"
+    consumer_key = os.environ["CONSUMER_KEY"]
+    consumer_secret = os.environ["CONSUMER_SECRET"]
+    access_token = os.environ["ACCESS_TOKEN"]
+    access_token_secret = os.environ["ACCESS_TOKEN_SECRET"]
 
     # Pass in our twitter API authentication key
     auth = tweepy.OAuth1UserHandler(
